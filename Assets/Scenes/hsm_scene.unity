@@ -371,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1368,13 +1368,10 @@ PrefabInstance:
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 8307548240390487749, guid: d10e13372d41b754cb05474680f880e5, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.238
       objectReference: {fileID: 0}
-=======
->>>>>>> 8c3f9b0d7437b9c9b7aaff9b9e09eb9b76df64ce
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3728,14 +3725,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac70161bd66598043b900c31738f32e8, type: 3}
-<<<<<<< HEAD
 --- !u!137 &1305754844 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5918104602103979942, guid: d10e13372d41b754cb05474680f880e5, type: 3}
   m_PrefabInstance: {fileID: 584511920}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 8c3f9b0d7437b9c9b7aaff9b9e09eb9b76df64ce
 --- !u!1 &1329233216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,14 +3783,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!137 &1370631668 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5875536825197226626, guid: d10e13372d41b754cb05474680f880e5, type: 3}
   m_PrefabInstance: {fileID: 584511920}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 8c3f9b0d7437b9c9b7aaff9b9e09eb9b76df64ce
 --- !u!1001 &1433906281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5493,7 +5484,4 @@ SceneRoots:
   - {fileID: 831203149}
   - {fileID: 917108460}
   - {fileID: 1183167944}
-<<<<<<< HEAD
   - {fileID: 2029962981}
-=======
->>>>>>> 8c3f9b0d7437b9c9b7aaff9b9e09eb9b76df64ce
