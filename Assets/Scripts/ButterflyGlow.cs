@@ -34,7 +34,7 @@ public class ButterflyXRGlow : MonoBehaviour
         if (!isInteracted)
         {
             float intensity = 1f + Mathf.Sin(Time.time * pulseSpeed) * pulseIntensity;
-            butterflyMat.SetColor("_EmissionColor", glowColor * intensity);
+            butterflyMat.SetColor("_EmissionColor", Color.red * 10f);
         }
     }
 
