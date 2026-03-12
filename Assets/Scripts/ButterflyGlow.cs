@@ -6,9 +6,9 @@ public class ButterflyXRGlow : MonoBehaviour
 {
     [Header("Glow Settings")]
     public Renderer butterflyRenderer;
-    public Color glowColor = Color.orange;
+    public Color glowColor = Color.blue;
     public float pulseSpeed = 2f;
-    public float pulseIntensity = 2f;
+    public float pulseIntensity = 4f;
 
     private Material butterflyMat;
     private bool isInteracted = false;
@@ -34,7 +34,7 @@ public class ButterflyXRGlow : MonoBehaviour
         if (!isInteracted)
         {
             float intensity = 1f + Mathf.Sin(Time.time * pulseSpeed) * pulseIntensity;
-            butterflyMat.SetColor("_EmissionColor", Color.red * 10f);
+            butterflyMat.SetColor("_EmissionColor", glowColor * intensity);
         }
     }
 
