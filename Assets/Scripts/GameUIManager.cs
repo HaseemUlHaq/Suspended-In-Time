@@ -1,12 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
+using System.Collections.Generic;
 
 public class GameUIManager : MonoBehaviour
 {
     public GameObject instructionPanel;
     public GameObject startButton;
-    public GameObject pauseButton;
     public GameObject pauseMenu;
+    public Transform playerHead;
+
+    private InputDevice rightController;
+    private bool isPaused = false;
+    private bool buttonPressedLastFrame = false;
 
     void Start()
     {
@@ -14,9 +20,36 @@ public class GameUIManager : MonoBehaviour
 
         instructionPanel.SetActive(true);
         startButton.SetActive(true);
-
-        pauseButton.SetActive(false);
         pauseMenu.SetActive(false);
+
+        GetRightController();
+    }
+
+    void Update()
+    {
+        if (!rightController.isValid)
+            GetRightController();
+
+        bool primaryButtonPressed;
+
+        if (rightController.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonPressed))
+        {
+            if (primaryButtonPressed && !buttonPressedLastFrame)
+            {
+                TogglePause();
+            }
+
+            buttonPressedLastFrame = primaryButtonPressed;
+        }
+    }
+
+    void GetRightController()
+    {
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDevices.GetDevicesAtXRNode(XRNode.RightHand, devices);
+
+        if (devices.Count > 0)
+            rightController = devices[0];
     }
 
     public void StartGame()
@@ -25,29 +58,38 @@ public class GameUIManager : MonoBehaviour
 
         instructionPanel.SetActive(false);
         startButton.SetActive(false);
+    }
 
-        pauseButton.SetActive(true);
+    void TogglePause()
+    {
+        if (Time.timeScale == 1f)
+            PauseGame();
+        else
+            ResumeGame();
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0f;
+        isPaused = true;
+
+        pauseMenu.transform.position = playerHead.position + playerHead.forward * 1.5f;
+        pauseMenu.transform.LookAt(playerHead);
 
         pauseMenu.SetActive(true);
-        pauseButton.SetActive(false);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1f;
+        isPaused = false;
 
         pauseMenu.SetActive(false);
-        pauseButton.SetActive(true);
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

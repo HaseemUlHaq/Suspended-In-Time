@@ -131,13 +131,14 @@ GameObject:
   - component: {fileID: 58816685}
   - component: {fileID: 58816684}
   - component: {fileID: 58816683}
+  - component: {fileID: 58816686}
   m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &58816682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -251,6 +252,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58816681}
   m_CullTransparentMesh: 1
+--- !u!114 &58816686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58816681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546c71395ed57744b892a7cfac08ce29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowPlayer
+  playerHead: {fileID: 1229474100}
+  offset: {x: 1.3, y: 1.3, z: 5}
 --- !u!1001 &85692809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2808,6 +2823,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 1229474096}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1229474100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1229474096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1251876303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3168,8 +3188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameStart
   instructionPanel: {fileID: 2120439091}
   startButton: {fileID: 2059094073}
-  pauseButton: {fileID: 58816681}
   pauseMenu: {fileID: 1120096037}
+  playerHead: {fileID: 1229474100}
 --- !u!224 &1472151723
 RectTransform:
   m_ObjectHideFlags: 0
