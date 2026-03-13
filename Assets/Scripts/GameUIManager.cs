@@ -10,8 +10,7 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
-        // Pause game at start
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
 
         instructionPanel.SetActive(true);
         startButton.SetActive(true);
@@ -46,7 +45,7 @@ public class GameUIManager : MonoBehaviour
         pauseButton.SetActive(true);
     }
 
-    public void QuitGame()
+    public void RestartGame()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
