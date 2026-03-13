@@ -117,7 +117,7 @@ To install and run Suspended In Time locally, follow the instructions below.
 
 **Requirements:**
 
-- Unity 2022.3 LTS or newer
+- Unity 6000.3 LTS or newer
 - Unity XR Interaction Toolkit
 - Android Build Support
 - Meta Quest 2 headset

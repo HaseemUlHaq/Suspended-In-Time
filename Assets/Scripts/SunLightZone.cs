@@ -6,15 +6,19 @@ public class SunLightZone : MonoBehaviour
     {
         ButterflyMovement butterfly = other.GetComponent<ButterflyMovement>();
         ActivateFire fire = other.GetComponent<ActivateFire>();
+        DeerActivation deer = other.GetComponent<DeerActivation>();
 
         if (butterfly != null)
         {
             butterfly.SetLit(true);
         }
-
         if (fire != null)
         {
             fire.SetLit(true);
+        }
+        if (deer != null)
+        {
+            deer.SetLit(true);
         }
     }
 
@@ -22,6 +26,8 @@ public class SunLightZone : MonoBehaviour
     {
         ButterflyMovement butterfly = other.GetComponent<ButterflyMovement>();
         ActivateFire fire = other.GetComponent<ActivateFire>();
+        DeerActivation deer = other.GetComponent<DeerActivation>();
+
         if (fire != null)
         {
             fire.SetLit(false);
@@ -29,6 +35,10 @@ public class SunLightZone : MonoBehaviour
         if (butterfly != null)
         {
             butterfly.SetLit(false);
+        }
+        if (deer != null)
+        {
+            deer.SetLit(false);
         }
     }
 }
