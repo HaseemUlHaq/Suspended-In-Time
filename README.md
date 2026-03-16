@@ -1,6 +1,6 @@
 # Suspended In Time
 
-![Suspended In Time logo](_image_) IMG
+![Suspended In Time logo](Assets/GithubAssets/poster_design.jpeg)
 
 ## Introduction
 
@@ -21,6 +21,9 @@ The design and development of the project followed an iterative process that inc
 ### Brainstorming
 
 The initial concept was developed through brainstorming sessions exploring themes of environmental interaction, discovery, and transformation. The final idea centered on a world suspended in time where everything is initially stopped and sunlight acts as the key interaction mechanic.
+
+![Brainstorming](Assets/GithubAssets/Brainstorming.jpg)
+
 
 ### User Research
 
@@ -77,7 +80,7 @@ Several iterations were made to refine:
 - Interaction detection using light zones
 - Object activation behaviors
 
-(Insert prototype screenshots here) IMG
+![Prototype Design](Assets/GithubAssets/prototype_design.png)
 
 ## System description
 
