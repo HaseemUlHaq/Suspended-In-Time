@@ -113,10 +113,7 @@ Suspended In Time includes several interactive features designed to create an im
 
 Watch the demo video or try the live version.
 
-<video width="60%" controls>
-  <source src="Assets/GithubAssets/gameplay.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch Gameplay Video](Assets/GithubAssets/gameplay.mp4)
 
 ## Installation
 
