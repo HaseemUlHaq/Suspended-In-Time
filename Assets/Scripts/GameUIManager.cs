@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.XR;
-using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class GameUIManager : MonoBehaviour
 {
@@ -10,46 +9,45 @@ public class GameUIManager : MonoBehaviour
     public GameObject pauseMenu;
     public Transform playerHead;
 
-    private InputDevice rightController;
+    public InputActionReference pauseAction;
+
     private bool isPaused = false;
-    private bool buttonPressedLastFrame = false;
 
     void Start()
     {
         //Time.timeScale = 0f;
 
+        pauseAction.action.actionMap.Enable();
         instructionPanel.SetActive(true);
+        pauseMenu.SetActive(true);
         startButton.SetActive(true);
         pauseMenu.SetActive(false);
-
-        GetRightController();
     }
 
-    void Update()
+    void OnEnable()
     {
-        if (!rightController.isValid)
-            GetRightController();
-
-        bool primaryButtonPressed;
-
-        if (rightController.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonPressed))
-        {
-            if (primaryButtonPressed && !buttonPressedLastFrame)
-            {
-                TogglePause();
-            }
-
-            buttonPressedLastFrame = primaryButtonPressed;
-        }
+        pauseAction.action.performed += OnPausePressed;
+        pauseAction.action.Enable();
     }
 
-    void GetRightController()
+    void OnDisable()
     {
-        List<InputDevice> devices = new List<InputDevice>();
-        InputDevices.GetDevicesAtXRNode(XRNode.RightHand, devices);
+        pauseAction.action.performed -= OnPausePressed;
+        pauseAction.action.Disable();
+    }
 
-        if (devices.Count > 0)
-            rightController = devices[0];
+    //void PausePressed(InputAction.CallbackContext context)
+    //{
+    //    OnPausePressed();
+    //}
+
+    void OnPausePressed(InputAction.CallbackContext context)
+    {
+        Debug.Log("Pause button pressed");
+        if (!isPaused)
+            PauseGame();
+        else
+            ResumeGame();
     }
 
     public void StartGame()
@@ -58,14 +56,6 @@ public class GameUIManager : MonoBehaviour
 
         instructionPanel.SetActive(false);
         startButton.SetActive(false);
-    }
-
-    void TogglePause()
-    {
-        if (Time.timeScale == 1f)
-            PauseGame();
-        else
-            ResumeGame();
     }
 
     public void PauseGame()
