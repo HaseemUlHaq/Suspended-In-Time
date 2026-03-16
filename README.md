@@ -95,7 +95,12 @@ Suspended In Time includes several interactive features designed to create an im
   - **Fire Object** – A fire ignites when the object is grabbed while highlighted by sunlight.
   - **Environmental Activation** – Highlighted objects become interactable, only those in sunlight can be activated.
 
-(Insert screenshots or GIF demonstrations here) IMG
+<p align="center">
+  <img src="Assets/GithubAssets/SS1.png" width="49%">
+  <img src="Assets/GithubAssets/SS2.png" width="49%">
+  <img src="Assets/GithubAssets/SS3.png" width="49%">
+  <img src="Assets/GithubAssets/SS4.png" width="49%">
+</p>
 
 - **Sun Manipulation** – Users can grab and move a sun object in the sky using VR controllers, directing light toward different parts of the environment.
 
@@ -108,7 +113,10 @@ Suspended In Time includes several interactive features designed to create an im
 
 Watch the demo video or try the live version.
 
-Link: (Add your demo or live version link here) IMG
+<video width="60%" controls>
+  <source src="Assets/GithubAssets/gameplay.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Installation
 
