@@ -1,6 +1,6 @@
 # Suspended In Time
 
-![Suspended In Time logo](_image_)
+![Suspended In Time logo](_image_) IMG
 
 ## Introduction
 
@@ -77,7 +77,7 @@ Several iterations were made to refine:
 - Interaction detection using light zones
 - Object activation behaviors
 
-(Insert prototype screenshots here)
+(Insert prototype screenshots here) IMG
 
 ## System description
 
@@ -92,7 +92,7 @@ Suspended In Time includes several interactive features designed to create an im
   - **Fire Object** – A fire ignites when the object is grabbed while highlighted by sunlight.
   - **Environmental Activation** – Highlighted objects become interactable, only those in sunlight can be activated.
 
-(Insert screenshots or GIF demonstrations here)
+(Insert screenshots or GIF demonstrations here) IMG
 
 - **Sun Manipulation** – Users can grab and move a sun object in the sky using VR controllers, directing light toward different parts of the environment.
 
@@ -105,7 +105,7 @@ Suspended In Time includes several interactive features designed to create an im
 
 Watch the demo video or try the live version.
 
-Link: (Add your demo or live version link here)
+Link: (Add your demo or live version link here) IMG
 
 ## Installation
 
@@ -150,16 +150,6 @@ Examples:
 - Grab a highlighted butterfly to make it fly.
 - Grab the highlighted fire object to ignite the flame.
 
-**Resetting the Scene**
-
-- Press the reset button in the environment to restore the scene to its initial paused state (everything stopped again).
-
-Some tips, tricks, and best practices for using Suspended In Time effectively:
-
-- Explore the environment slowly to discover which areas respond to light.
-- Try moving the sun to different angles to reveal hidden interactive elements.
-- Use the reset button to experiment with different sequences of activation.
-
 ## References
 
 The following tools and resources were used during the development of this project:
@@ -175,7 +165,6 @@ Additional inspiration was taken from existing VR experiences that focus on envi
 
 **Haseem Ul Haq**  
 Software Engineer & XR Developer
-- GitHub: https://github.com/HaseemUlHaq
 - LinkedIn: https://www.linkedin.com/in/haseem-ul-haq/
 
 **Raman Ghimire**  
