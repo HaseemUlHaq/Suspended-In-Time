@@ -24,6 +24,9 @@ The initial concept was developed through brainstorming sessions exploring theme
 
 ![Brainstorming](Assets/GithubAssets/Brainstorming.jpg)
 
+### Design Document
+[Design Document](Assets/GithubAssets/DesignDocument.docx)
+
 
 ### User Research
 
