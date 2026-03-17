@@ -43,11 +43,10 @@ public class GameUIManager : MonoBehaviour
 
     void OnPausePressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Pause button pressed");
-        if (!isPaused)
+        if (context.performed && !isPaused)
+        {
             PauseGame();
-        else
-            ResumeGame();
+        }
     }
 
     public void StartGame()
@@ -60,11 +59,18 @@ public class GameUIManager : MonoBehaviour
 
     public void PauseGame()
     {
+        if (isPaused) return; // prevents repeated triggering
+
         Time.timeScale = 0f;
         isPaused = true;
 
-        pauseMenu.transform.position = playerHead.position + playerHead.forward * 1.5f;
+        Vector3 menuPosition = playerHead.position
+                             + playerHead.forward * 2.0f;
+
+        pauseMenu.transform.position = menuPosition;
+
         pauseMenu.transform.LookAt(playerHead);
+        pauseMenu.transform.Rotate(0, 180, 0);
 
         pauseMenu.SetActive(true);
     }
